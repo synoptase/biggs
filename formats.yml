@@ -6,7 +6,7 @@
 #   * state
 #   * country
 #
---- 
+---
 ae: |-
     {{recipient}}
     {{street}}
@@ -284,8 +284,9 @@ ro: |-
     {{country}}
 ru: |-
     {{recipient}}
-    {{zip}} {{city}}
-    {{street}}
+    {{street}} {{city}}
+    {{state}}
+    {{zip}}
     {{country}}
 sa: |-
     {{recipient}}
@@ -300,8 +301,7 @@ se: |-
 sg: |-
     {{recipient}}
     {{street}}
-    {{city}} {{zip}}
-    {{country}}
+    {{country}} {{zip}}
 si: |-
     {{recipient}}
     {{street}}
@@ -341,7 +341,7 @@ ua: |-
 us: |-
     {{recipient}}
     {{street}}
-    {{city}} {{state}} {{zip}}
+    {{city}}, {{state}} {{zip}}
     {{country}}
 ye: |-
     {{recipient}}
@@ -352,7 +352,7 @@ yu: |-
     {{recipient}}
     {{street}}
     {{zip}} {{city}}
-    
+
     {{state}}
     {{country}}
 za: |-
