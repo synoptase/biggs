@@ -18,7 +18,6 @@ module Biggs
       else
         country_name = localize_country_name_to.blank? ? format.country_name || format.iso_code : I18nData.countries(localize_country_name_to)[format.iso_code]
       end
-      country_name = blank_country_on.include?(format.iso_code) ? "" : format.country_name || format.iso_code
 
       (FIELDS - [:country]).each do |key|
         format_string.gsub!(/\{\{#{key}\}\}/, (values[key] || "").to_s)
