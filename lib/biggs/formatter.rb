@@ -5,7 +5,7 @@ module Biggs
 
     def initialize(options={})
       @blank_country_on = [options[:blank_country_on]].compact.flatten.map{|s| s.to_s.downcase}
-      @localize_country_name_to = options[:localize_country_name_to].to_s.downcase
+      @localize_country_name_to = options[:localize_country_name_to].to_s.upcase
     end
 
     def format(iso_code, values={})
@@ -16,7 +16,7 @@ module Biggs
       if blank_country_on.include?(format.iso_code)
         country_name = ""
       else
-        country_name = localize_country_name_to.blank? ? format.country_name || format.iso_code : I18nData.countries(localize_country_name_to)[format.iso_code]
+        country_name = localize_country_name_to.blank? ? format.country_name || format.iso_code : I18nData.countries(localize_country_name_to)[format.iso_code.upcase]
       end
 
       (FIELDS - [:country]).each do |key|
