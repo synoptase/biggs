@@ -22,7 +22,7 @@ module Biggs
       (FIELDS - [:country]).each do |key|
         format_string.gsub!(/\{\{#{key}\}\}/, (values[key] || "").to_s)
       end
-      format_string.gsub!(/\{\{country\}\}/, country_name)
+      format_string.gsub!(/\{\{country\}\}/, country_name.upcase)
       format_string.gsub(/\n$/, "")
     end
 
